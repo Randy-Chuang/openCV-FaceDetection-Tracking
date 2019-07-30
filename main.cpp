@@ -111,7 +111,7 @@ public:
 		if (net.empty()) {	//Checking dnn model 
 			cerr << "Can't load the neural network." << endl;
 			cerr << "Maybe choose other dnn model to try?" << endl;
-			cerr << "https://github.com/opencv/opencv_extra/blob/master/testdata/dnn/download_models.py#L225-L244" << endl;
+			cerr << "https://github.com/opencv/opencv_extra/blob/master/testdata/dnn/download_models.py#L225-L239" << endl;
 			system("pause");
 			exit(-1);
 		}
@@ -370,7 +370,6 @@ int main() {
 		if (tPrevious) {
 			tt = (double)(t - tPrevious) / cv::getTickFrequency();
 			fps = 1 / tt;
-			cout << fps << endl;
 			putText(frame, format("FPS: %.1f", fps), Point(480, 470), FONT_HERSHEY_PLAIN, 2, Scalar(0, 0, 255), 2, 8);
 		}
 		tPrevious = t;
